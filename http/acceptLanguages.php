@@ -12,6 +12,7 @@ switch ($lang){
         break;
     default:
         echo "<h1>Benvingut a la pàgina!</h1>";
+        echo "<p>Idioma per defecte</p>";
         break;
 }
 ?>
