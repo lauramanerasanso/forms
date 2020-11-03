@@ -49,7 +49,7 @@ else
             $_COOKIE['PHPSESSID'] = session_id();
 
             for ($i = 0 ; $i < count($_SESSION['wl']) ; $i++){
-                echo 'Article ' .$i+1 . ' : ';
+                echo 'Article ' . $i . ' : ';
                 echo $_SESSION['wl'][$i]. '<br>';
             }
         ?>
