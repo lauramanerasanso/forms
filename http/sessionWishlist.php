@@ -39,8 +39,9 @@ if(isset($_SESSION['wl']))
 else
 {
     $_SESSION['wl']= array();
-
-    $art = $_POST['art'];
+    if(isset($_POST['art'])) {
+        $art = $_POST['art'];
+    }
 
     array_push($_SESSION['wl'], $art);
 }
