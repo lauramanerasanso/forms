@@ -32,23 +32,23 @@ if(isset($_SESSION['wl']))
 {
     $art = $_POST['art'];
 
-    array_push($wlist, $art);
+    array_push($_SESSION['wl'], $art);
 
 }
 else
 {
-    $wlist= array();
+    $_SESSION['wl']= array();
 
     $art = $_POST['art'];
 
-    array_push($wlist, $art);
+    array_push($_SESSION['wl'], $art);
 }
 ?>
 <?php
 $_COOKIE['PHPSESSID'] = session_id();
 
-for ($i = 0 ; $i < count($wlist) ; $i++){
-    echo $wlist[$i] . "<br>";
+for ($i = 0 ; $i < count($_SESSION['wl']) ; $i++){
+    echo $_SESSION['wl'][$i] . "<br>";
 }
 ?>
 </body>
