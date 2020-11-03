@@ -30,6 +30,7 @@
 session_start();
 if(isset($_SESSION['wl']))
 {
+
     $art = $_POST['art'];
 
     array_push($_SESSION['wl'], $art);
@@ -49,7 +50,6 @@ else
             $_COOKIE['PHPSESSID'] = session_id();
 
             for ($i = 0 ; $i < count($_SESSION['wl']) ; $i++){
-                echo 'Article ' . $i . ' : ';
                 echo $_SESSION['wl'][$i]. '<br>';
             }
         ?>
