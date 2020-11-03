@@ -41,9 +41,10 @@ else
     $_SESSION['wl']= array();
     if(isset($_POST['art'])) {
         $art = $_POST['art'];
+        array_push($_SESSION['wl'], $art);
     }
 
-    array_push($_SESSION['wl'], $art);
+
 }
 ?>
 <h4 style="text-align: center">WISHLIST</h4>
