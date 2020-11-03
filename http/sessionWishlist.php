@@ -1,6 +1,4 @@
-<?php
-session_start();
-?>
+
 <!DOCTYPE html>
 <html lang="ca">
 <head>
@@ -29,11 +27,25 @@ session_start();
 </form>
 <h4 style="text-align: center">WISHLIST</h4>
 <?php
-$wlist= array();
+session_start();
+if(isset($_SESSION['wl']))
+{
+    $art = $_POST['art'];
 
-$art = $_POST['art'];
+    array_push($wlist, $art);
 
-array_push($wlist, $art);
+}
+else
+{
+    $wlist= array();
+
+    $art = $_POST['art'];
+
+    array_push($wlist, $art);
+}
+?>
+<?php
+$_COOKIE['PHPSESSID'] = session_id();
 
 for ($i = 0 ; $i < count($wlist) ; $i++){
     echo $wlist[$i] . "<br>";
