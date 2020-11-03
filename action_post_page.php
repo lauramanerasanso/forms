@@ -1,4 +1,5 @@
 <!DOCTYPE html>
+<html lang="ca">
     <head>
         <meta charset="UTF-8">
         <title>Resultat Get - Laura Manera Sansó</title>
@@ -39,6 +40,6 @@
             </td> 
         </tr>
     </table>
-</div>
+
 </body>
 </html>
