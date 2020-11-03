@@ -45,17 +45,14 @@ else
 }
 ?>
 <h4 style="text-align: center">WISHLIST</h4>
-    <table>
-        <tr>
-            <?php
-                $_COOKIE['PHPSESSID'] = session_id();
-                for ($i = 0 ; $i < count($_SESSION['wl']) ; $i++){
-                    echo "<th>" . $i+1 . "</th>";
-                    echo "<td>". $_SESSION['wl'][$i] . "</td>";
-                }
-            ?>
-        </tr>
-    </table>
+        <?php
+            $_COOKIE['PHPSESSID'] = session_id();
+
+            for ($i = 0 ; $i < count($_SESSION['wl']) ; $i++){
+                echo 'Article ' .$i+1 . ' : ';
+                echo $_SESSION['wl'][$i]. '<br>';
+            }
+        ?>
 </body>
 </html>
 
