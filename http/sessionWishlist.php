@@ -25,7 +25,7 @@
     <input type="text" id="art" name="art" placeholder="Ordinador"><br><br>
     <input type="submit" value="Afegir a la Wishlist">
 </form>
-<h4 style="text-align: center">WISHLIST</h4>
+
 <?php
 session_start();
 if(isset($_SESSION['wl']))
@@ -44,13 +44,18 @@ else
     array_push($_SESSION['wl'], $art);
 }
 ?>
-<?php
-$_COOKIE['PHPSESSID'] = session_id();
-
-for ($i = 0 ; $i < count($_SESSION['wl']) ; $i++){
-    echo $_SESSION['wl'][$i] . "<br>";
-}
-?>
+<h4 style="text-align: center">WISHLIST</h4>
+    <table>
+        <tr>
+            <?php
+                $_COOKIE['PHPSESSID'] = session_id();
+                for ($i = 0 ; $i < count($_SESSION['wl']) ; $i++){
+                    echo "<th>" . $i+1 . "</th>";
+                    echo "<td>". $_SESSION['wl'][$i] . "</td>";
+                }
+            ?>
+        </tr>
+    </table>
 </body>
 </html>
 
