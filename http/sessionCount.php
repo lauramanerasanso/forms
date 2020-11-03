@@ -7,7 +7,8 @@ if(isset($_SESSION['count']))
 }
 else
 {
-    $_SESSION['count'] = 1;
+    $_SESSION['count'] = 0;
+    $_SESSION['count'] = $_SESSION['count'] + 1;
     echo "Benvingut a la pàgina. L'has visitada " . $_SESSION['count'] . " vegades.";
 }
 ?>
