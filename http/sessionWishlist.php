@@ -1,11 +1,19 @@
+<?php
+session_start();
+?>
 <!DOCTYPE html>
 <html lang="ca">
 <head>
     <meta charset="UTF-8">
     <title>WishList - Laura Manera Sansó</title>
     <style>
-        th, td{
-            border: solid;
+        body{
+            color:dimgray;
+            background-color:lightblue;
+            margin: 2%;
+        }
+        form{
+            text-align: center;
         }
     </style>
 </head>

@@ -8,6 +8,7 @@
                 border: solid;
             }
         </style>
+
 </head>
 <body>
     <h4>Les dades introduïdes al formulari són:</h4>
