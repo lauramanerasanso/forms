@@ -35,8 +35,6 @@ if(isset($_SESSION['wl']))
         array_push($_SESSION['wl'], $art);
     }
 
-
-
 }
 else
 {
@@ -51,7 +49,7 @@ else
 ?>
 <h4 style="text-align: center">WISHLIST</h4>
         <?php
-            $_COOKIE['PHPSESSID'] = session_id();
+
 
             for ($i = 0 ; $i < count($_SESSION['wl']) ; $i++){
                 echo $_SESSION['wl'][$i]. '<br>';
